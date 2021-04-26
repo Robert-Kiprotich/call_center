@@ -37,26 +37,24 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'base',
-        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
+        path: 'calls',
+        loadChildren: () => import('./views/calls/calls.module').then(m => m.CallsModule)
         },
       
       {
-        path: 'buttons',
-        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
+        path: 'sms',
+        loadChildren: () => import('./views/sms/buttons.module').then(m => m.ButtonsModule)
       },
       {
-        path: 'charts',
-        loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
+        path: 'mails',
+        loadChildren: () => import('./views/mails/mails.module').then(m => m.MailsModule)
       },
+      
       {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
-      {
-        path: 'calls',
-        loadChildren: () => import('./views/calls/calls.module').then(m => m.CallsModule)
-      },
+      
 
     ]
   },

@@ -12,64 +12,85 @@ export const navItems: INavData[] = [
   },
   {
     title: true,
-    name: 'Components'
+    name: 'Calls'
   },
-  {
-    name: 'Base',
-    url: '/base',
-    icon: 'icon-puzzle',
-  },
+
   {
     name: 'Calls',
-    url: '/base/calls',
-    icon: 'icon-puzzle'
+    url: '/calls',
+    icon: 'icon-puzzle',
+    children: [
+
+      {
+        name: 'Missed',
+        url: '/calls/missedcalls',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Dialled',
+        url: '/calls/dialledcalls',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Recieved',
+        url: '/calls/recievedcalls',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Rejected',
+        url: '/calls/rejectedcalls',
+        icon: 'icon-puzzle'
+      },
+
+      {
+        name: 'inbox',
+        url: '/calls/inbox',
+        icon: 'icon-puzzle'
+      },
+    ]
   },
+
+
   {
-    name: 'Cards',
-    url: '/base/cards',
-    icon: 'icon-puzzle'
-  },
-  {
-    name: 'Missed',
-    url: '/base/missedcalls',
-    icon: 'icon-puzzle'
-  },
-  {
-    name: 'Dialled',
-    url: '/base/dialledcalls',
-    icon: 'icon-puzzle'
-  },
-  {
-    name: 'Recieved',
-    url: '/base/recievedcalls',
-    icon: 'icon-puzzle'
-  },
-  {
-    name: 'Rejected',
-    url: '/base/rejectedcalls',
-    icon: 'icon-puzzle'
+    name: 'Messages',
+    url: '/sms',
+    icon: 'icon-puzzle',
+    children: [
+
+
+      {
+        name: 'Sent',
+        url: '/sms/sent',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Recieved',
+        url: '/sms/recieved',
+        icon: 'icon-puzzle'
+      },
+    ]
   },
 
   {
-    name: 'inbox',
-    url: '/base/inbox',
-    icon: 'icon-puzzle'
-  },
-  
-  {
-    name: 'Collapses',
-    url: '/base/collapses',
-    icon: 'icon-puzzle'
-  },
-  {
-    name: 'Forms',
-    url: '/base/forms',
-    icon: 'icon-puzzle'
-  },
-  {
-    name: 'Navbars',
-    url: '/base/navbars',
-    icon: 'icon-puzzle'
-
-  },
+    name: 'Mails',
+    url: '/mails',
+    icon: 'icon-puzzle',
+    children: [
+      {
+        name: 'inbox',
+        url: '/mails/inbox',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Recieved',
+        url: '/mails/sent',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'spam',
+        url: '/mails/spam',
+        icon: 'icon-puzzle'
+      },
+    ]
+  }
 ];

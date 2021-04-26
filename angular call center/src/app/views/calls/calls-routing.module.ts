@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { CardsComponent } from './cards.component';
-
 import { InboxComponent } from './inbox.component'
 import { NavbarsComponent } from './navbars/navbars.component';
 import { CallsComponent } from './calls.component'
@@ -79,4 +76,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BaseRoutingModule { }
+export class CallsRoutingModule { }
