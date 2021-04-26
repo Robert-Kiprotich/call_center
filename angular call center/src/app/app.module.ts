@@ -20,6 +20,9 @@ import { DefaultLayoutComponent } from './containers';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 
@@ -42,6 +45,8 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { CallsComponent } from './views/calls/calls.component';
+
 
 @NgModule({
   imports: [
@@ -59,15 +64,19 @@ import { ChartsModule } from 'ng2-charts';
     ChartsModule,
     IconModule,
     IconSetModule.forRoot(),
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
     P404Component,
     P500Component,
+    CallsComponent,
+   
    
   ],
   providers: [
+   
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy

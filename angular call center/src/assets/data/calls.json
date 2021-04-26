@@ -1,0 +1,26 @@
+[
+  {
+    "missed": 11,
+    "rejected": 4,
+    "recieved": "25",
+    "dialled": 27,
+    "VoiP": "46",
+    "Mails":"20",
+    "IVR": "33",
+    "voice_calls":20,
+    "voice_sms": "42",
+    "percentage": "25%",
+    "monday":300,
+    "read":358,
+    "replied":400,
+    "spam":600,
+"tuesday":150,
+"wednesday":100,
+"thursday":265,
+"friday":110,
+"saturday":234,
+"sunday":432,
+"total":870
+  }
+ 
+]

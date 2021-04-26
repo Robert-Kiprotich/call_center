@@ -6,15 +6,26 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { ProgressBarModule } from 'angular-progress-bar';
 
 @NgModule({
   imports: [
     FormsModule,
+    ProgressBarModule,
     DashboardRoutingModule,
     ChartsModule,
-    BsDropdownModule,
-    ButtonsModule.forRoot()
+    HttpClientModule,
+    CommonModule
+   
+  ],
+  providers: [
+   
   ],
   declarations: [ DashboardComponent ]
 })
-export class DashboardModule { }
+export class DashboardModule {
+  
+ 
+}

@@ -3,18 +3,28 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { IconSetService } from '@coreui/icons-angular';
 import { freeSet } from '@coreui/icons';
+import {CallsService} from './calls.service'
 
 @Component({
   // tslint:disable-next-line
   selector: 'body',
   template: '<router-outlet></router-outlet>',
+  
+
   providers: [IconSetService],
 })
 export class AppComponent implements OnInit {
+ 
   constructor(
     private router: Router,
-    public iconSet: IconSetService
+    public iconSet: IconSetService,
+    private calls:CallsService
   ) {
+    // this.calls.getData().subscribe(data => {
+     
+    //   this.data = [data]
+    //   //console.log(data)
+    // })
     // iconSet singleton
     iconSet.icons = { ...freeSet };
   }

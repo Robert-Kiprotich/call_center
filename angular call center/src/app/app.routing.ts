@@ -28,7 +28,7 @@ export const routes: Routes = [
       title: 'Page 500'
     }
   },
-  
+
   {
     path: '',
     component: DefaultLayoutComponent,
@@ -37,6 +37,15 @@ export const routes: Routes = [
     },
     children: [
       {
+        path: 'base',
+        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
+        },
+      
+      {
+        path: 'buttons',
+        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
+      },
+      {
         path: 'charts',
         loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
       },
@@ -44,14 +53,18 @@ export const routes: Routes = [
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
-      
+      {
+        path: 'calls',
+        loadChildren: () => import('./views/calls/calls.module').then(m => m.CallsModule)
+      },
+
     ]
   },
   { path: '**', component: P404Component }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
